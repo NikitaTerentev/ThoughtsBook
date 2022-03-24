@@ -12,16 +12,13 @@ class BookVC: UIViewController {
     
     private lazy var customView = BookView()
     
-    
     override func loadView() {
         view = customView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-    
     }
     
     func convertImageToBase64String (img: UIImage) -> String {
@@ -59,8 +56,7 @@ class BookVC: UIViewController {
             singleTap.numberOfTapsRequired = 1
             customView.image.addGestureRecognizer(singleTap)
     }
-
-    
+ 
 }
 
 //MARK: - UIImagePickerController

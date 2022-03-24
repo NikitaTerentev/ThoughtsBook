@@ -35,6 +35,7 @@ class InitialTableVC: UITableViewController {
         }
     }
     
+    //MARK: - UI and some Funcs 
     func setupUI() {
         tableView.register(Cell.self, forCellReuseIdentifier: "CellIdentity")
 
