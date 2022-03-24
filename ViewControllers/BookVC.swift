@@ -21,18 +21,16 @@ class BookVC: UIViewController {
         setupUI()
     }
     
-    func convertImageToBase64String (img: UIImage) -> String {
-        return img.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
-    }
     
+    //MARK: - Working with additing books
     
     @objc func newBookLabel() {
 
-        let newImage = convertImageToBase64String(img: customView.image.image!)
+        let newImage = Converter.shared.convertImageToBase64String(img: customView.image.image ?? #imageLiteral(resourceName: "liter"))
         let realm = try! Realm()
         let model = BooksModel()
-        model.book = customView.tf.text ?? "error"
-        model.author = customView.secondTf.text ?? "errr"
+        model.book = customView.tf.text ?? ""
+        model.author = customView.secondTf.text ?? ""
         model.currentImage = newImage
         
         let currentModel = BooksModel(value: model)
@@ -46,6 +44,8 @@ class BookVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    //MARK: - UI
+
     private func setupUI() {
         customView.button.addTarget(self, action: #selector(newBookLabel), for: .touchUpInside)
 

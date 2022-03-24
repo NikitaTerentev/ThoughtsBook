@@ -8,12 +8,6 @@
 import Foundation
 import RealmSwift
 
-
-protocol StorageManager {
-    func save(model: BooksModel)
-    func obtainModel() -> Results<BooksModel>
-}
-
 class RealmManager: StorageManager {
     
     fileprivate lazy var mainRealm = try! Realm(configuration: .defaultConfiguration)

@@ -59,17 +59,12 @@ class Cell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
-        let imageData = Data(base64Encoded: imageBase64String)
-        let image = UIImage(data: imageData!)
-        return image!
-    }
     
     func configure(model: BooksModel) {
         
         self.bookLabel.text = model.book
         self.authorLabel.text = model.author
-        let newImage = convertBase64StringToImage(imageBase64String: model.currentImage)
+        let newImage = Converter.shared.convertBase64StringToImage(imageBase64String: model.currentImage)
         self.imageBook.image = newImage
     }
 

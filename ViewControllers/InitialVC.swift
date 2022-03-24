@@ -16,14 +16,13 @@ class InitialTableVC: UITableViewController {
     var bookList: Results<BooksModel>!
     let storageManager = RealmManager()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         bookList = storageManager.obtainModel()
         setupUI()
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -64,8 +63,6 @@ class InitialTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentity") as! Cell
     
         cell.configure(model: bookList[indexPath.row])
-
-//        cell.imageView?.image = #imageLiteral(resourceName: "liter")
         return cell
     }
     

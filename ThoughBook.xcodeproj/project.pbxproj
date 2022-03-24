@@ -20,6 +20,8 @@
 		1150702A27E626A000AC2ECE /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150702927E626A000AC2ECE /* Cell.swift */; };
 		1150702C27E626AA00AC2ECE /* CustomBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150702B27E626AA00AC2ECE /* CustomBookView.swift */; };
 		1150702F27E6271200AC2ECE /* BookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150702E27E6271200AC2ECE /* BookVC.swift */; };
+		1150703327ECBD4200AC2ECE /* Protocols .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150703227ECBD4200AC2ECE /* Protocols .swift */; };
+		1150703527ECBF2C00AC2ECE /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150703427ECBF2C00AC2ECE /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1150702927E626A000AC2ECE /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		1150702B27E626AA00AC2ECE /* CustomBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookView.swift; sourceTree = "<group>"; };
 		1150702E27E6271200AC2ECE /* BookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVC.swift; sourceTree = "<group>"; };
+		1150703227ECBD4200AC2ECE /* Protocols .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocols .swift"; sourceTree = "<group>"; };
+		1150703427ECBF2C00AC2ECE /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				1150702227E6263200AC2ECE /* .gitirnore */,
+				1150703127ECBD2E00AC2ECE /* Protocols */,
 				1150703027E628AA00AC2ECE /* Managers */,
-				1150702D27E626E500AC2ECE /* BookVC */,
-				1150702627E6268500AC2ECE /* Model */,
+				1150702D27E626E500AC2ECE /* ViewControllers */,
+				1150702627E6268500AC2ECE /* Models */,
 				1150700827E624BF00AC2ECE /* ThoughBook */,
 				1150700727E624BF00AC2ECE /* Products */,
 			);
@@ -83,31 +88,40 @@
 			path = ThoughBook;
 			sourceTree = "<group>";
 		};
-		1150702627E6268500AC2ECE /* Model */ = {
+		1150702627E6268500AC2ECE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1150702727E6269A00AC2ECE /* BooksModel.swift */,
 				1150702927E626A000AC2ECE /* Cell.swift */,
 				1150702B27E626AA00AC2ECE /* CustomBookView.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		1150702D27E626E500AC2ECE /* BookVC */ = {
+		1150702D27E626E500AC2ECE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1150700D27E624BF00AC2ECE /* InitialVC.swift */,
 				1150702E27E6271200AC2ECE /* BookVC.swift */,
 			);
-			path = BookVC;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		1150703027E628AA00AC2ECE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				1150702427E6265600AC2ECE /* RealmManager.swift */,
+				1150703427ECBF2C00AC2ECE /* Converter.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		1150703127ECBD2E00AC2ECE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1150703227ECBD4200AC2ECE /* Protocols .swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1150703327ECBD4200AC2ECE /* Protocols .swift in Sources */,
 				1150700E27E624BF00AC2ECE /* InitialVC.swift in Sources */,
 				1150702527E6265600AC2ECE /* RealmManager.swift in Sources */,
 				1150700A27E624BF00AC2ECE /* AppDelegate.swift in Sources */,
+				1150703527ECBF2C00AC2ECE /* Converter.swift in Sources */,
 				1150702827E6269A00AC2ECE /* BooksModel.swift in Sources */,
 				1150702C27E626AA00AC2ECE /* CustomBookView.swift in Sources */,
 				1150702A27E626A000AC2ECE /* Cell.swift in Sources */,
